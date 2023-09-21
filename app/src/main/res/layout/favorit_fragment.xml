@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:text="Favorite"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pluse"/>
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:id="@+id/line_13"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_13"
+        android:backgroundTint="@color/black" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="14dp"
+            android:id="@+id/Favoritebox1"
+            android:layout_marginTop="16dp"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:background="@drawable/custom_icboxfavorate">
+            <ImageView
+                android:id="@+id/im_favorite"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:src="@drawable/im_pro_test1"/>
+
+            <ImageView
+                android:id="@+id/im_favorite1"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/im_favorite"
+                android:src="@drawable/im_pro_test1" />
+            <ImageView
+                android:layout_marginTop="1dp"
+                android:id="@+id/im_favorite2"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/im_favorite"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/im_pro_test1"/>
+            <ImageView
+                android:layout_marginTop="1dp"
+                android:id="@+id/im_favorite3"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignStart="@id/im_favorite1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/im_favorite1"
+                android:src="@drawable/im_pro_test1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="14dp"
+            android:id="@+id/Favoritebox2"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:background="@drawable/custom_icboxfavorate">
+            <ImageView
+                android:id="@+id/im_favorite4"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:src="@drawable/im_pro_test1"/>
+
+            <ImageView
+                android:id="@+id/im_favorite5"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/im_favorite4"
+                android:src="@drawable/im_pro_test1" />
+
+            <ImageView
+                android:id="@+id/im_favorite6"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/im_favorite4"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/im_pro_test1" />
+
+            <ImageView
+                android:id="@+id/im_favorite7"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@id/im_favorite5"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/im_favorite6"
+                android:src="@drawable/im_pro_test1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_heard_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Favoritebox1"
+            android:layout_alignEnd="@+id/Favoritebox1"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="16dp"
+            android:text="ALL HEARTS"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_heard_all"
+            android:layout_alignEnd="@+id/Favoritebox1"
+            android:layout_marginEnd="63dp"
+            android:text="4 ITEMS"/>
+        <TextView
+            android:id="@+id/text_heard_all1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Favoritebox2"
+            android:layout_alignEnd="@+id/Favoritebox2"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="16dp"
+            android:text=" WEEDING"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_heard_all"
+            android:layout_alignEnd="@+id/Favoritebox2"
+            android:layout_marginEnd="55dp"
+            android:text="1 ITEMS"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/Favoritebox3"
+            android:layout_marginTop="16dp"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:padding="14dp"
+            android:background="@drawable/custom_icboxfavorate">
+            <ImageView
+                android:id="@+id/im_favorite8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:src="@drawable/im_pro_test1"/>
+
+            <ImageView
+                android:id="@+id/im_favorite9"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/im_favorite8"
+                android:src="@drawable/im_pro_test1" />
+
+            <ImageView
+                android:id="@+id/im_favorite10"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/im_favorite8"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/im_pro_test1" />
+
+            <ImageView
+                android:id="@+id/im_favorite11"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@id/im_favorite9"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/im_favorite10"
+                android:src="@drawable/im_pro_test1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Favoritebox4"
+            android:padding="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:background="@drawable/custom_icboxfavorate">
+            <ImageView
+                android:id="@+id/im_favorite12"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:src="@drawable/im_pro_test1"/>
+
+            <ImageView
+                android:id="@+id/im_favorite13"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/im_favorite12"
+                android:src="@drawable/im_pro_test1" />
+
+            <ImageView
+                android:id="@+id/im_favorite14"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/im_favorite12"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/im_pro_test1" />
+
+            <ImageView
+                android:id="@+id/im_favorite15"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@id/im_favorite13"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/im_favorite14"
+                android:src="@drawable/im_pro_test1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_heard_all3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Favoritebox3"
+            android:layout_alignEnd="@+id/Favoritebox3"
+            android:layout_marginEnd="36dp"
+            android:layout_marginTop="16dp"
+            android:text="KHMER EDITOR"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_heard_all3"
+            android:layout_alignEnd="@+id/Favoritebox3"
+            android:layout_marginEnd="63dp"
+            android:text="2 ITEMS"/>
+        <TextView
+            android:id="@+id/text_heard_all4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Favoritebox4"
+            android:layout_alignEnd="@+id/Favoritebox4"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="16dp"
+            android:text="BAGS"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_heard_all4"
+            android:layout_alignEnd="@+id/Favoritebox4"
+            android:layout_marginEnd="55dp"
+            android:text="0 ITEMS"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

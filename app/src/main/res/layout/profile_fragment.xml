@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp">
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/im_Profile"
+                android:layout_alignParentStart="true"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:cardCornerRadius="200dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/im_profile" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/text_name"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/im_Profile"
+                android:text="Sao Vichheka"/>
+            <ImageView
+                android:layout_marginStart="6dp"
+                android:layout_centerVertical="true"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_toEndOf="@id/text_name"
+                android:layout_alignTop="@id/text_name"
+                android:src="@drawable/ic_verified"
+                android:layout_alignBottom="@id/text_name"/>
+            <ImageView
+                android:layout_marginTop="6dp"
+                android:id="@+id/ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_name"
+                android:layout_alignStart="@id/text_name"
+                android:src="@drawable/ic_email"/>
+
+            <ImageView
+                android:id="@+id/ic_ig"
+                android:layout_marginStart="6dp"
+                android:layout_alignBottom="@id/ic_email"
+                android:layout_alignTop="@id/ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ic_email"
+                android:src="@drawable/ic_ig" />
+            <ImageView
+                android:id="@+id/ic_facebook"
+                android:layout_marginStart="6dp"
+                android:layout_alignBottom="@id/ic_email"
+                android:layout_alignTop="@id/ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ic_ig"
+                android:src="@drawable/ic_facebook" />
+            <ImageView
+                android:layout_marginStart="6dp"
+                android:layout_alignBottom="@id/ic_facebook"
+                android:layout_alignTop="@id/ic_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ic_facebook"
+                android:src="@drawable/ic_google" />
+            <ImageView
+                android:layout_marginRight="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_arrow_next"/>
+        </RelativeLayout>
+        <ImageView
+            android:layout_marginStart="67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cauppro"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@drawable/custom_backgrownd_post"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="137dp">
+
+        <TextView
+            android:id="@+id/text_Listing0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17dp"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/text_Listing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_Listing0"
+            android:text="Listings" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text_Following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17dp"
+            android:text="19" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_Following"
+            android:text="Following" />
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text_Followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="27dp"
+            android:text="0" />
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_Followers"
+            android:text="Following" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_liked"
+            android:layout_alignStart="@+id/text_Listing0"
+            android:layout_alignEnd="@+id/text_Listing0"
+            android:text="0" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/text_liked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/text_Listing"
+            android:layout_alignEnd="@+id/text_Listing"
+            android:layout_alignParentBottom="true"
+            android:text="Liked" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/text_History"
+            android:layout_alignStart="@+id/text_History"
+            android:layout_alignEnd="@+id/text_History"
+            android:textAlignment="center"
+            android:text="19" />
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/text_History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="History" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="63dp"
+            android:layout_marginEnd="27dp"
+            android:background="@drawable/custom_backgrownd_post">
+
+            <ImageView
+                android:id="@+id/ic_idcard"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_idcard" />
+
+            <TextView
+                android:id="@+id/text_identify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ic_idcard"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/ic_idcard"
+                android:text="Identity Card" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/text_identify"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_bt_post"
+                android:paddingHorizontal="6dp"
+                android:text="Unverified"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginEnd="16dp"
+            android:layout_width="160dp"
+            android:layout_height="63dp"
+            android:background="@drawable/custom_backgrownd_post"
+            android:layout_alignParentEnd="true">
+            <ImageView
+                android:id="@+id/ic_clothes"
+                android:layout_alignParentStart="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_clothes"/>
+
+            <TextView
+                android:layout_toEndOf="@id/ic_clothes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:text="My Style Bio" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@drawable/custom_backgrownd_post"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_findfriend"
+                />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Find Friends" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="6dp"
+            android:id="@+id/line_13"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_font"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_account"
+                />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Profile" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_font"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_trading"
+                />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="My Shop Activity" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_font"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_settings"
+                />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="System Settings" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RentClothes</string>
+    <string name="search">search...</string>
+    <string name="what_do_you_want_to_rent">What do you want to rent?</string>
+    <string name="khmer">KHMER</string>
+    <string name="graduation">GRADUATION</string>
+    <string name="wedding">WEDDING</string>
+    <string name="weekend">WEEKEND</string>
+    <string name="home">HOME</string>
+    <string name="trending_now">TRENDING NOW</string>
+    <string name="khmer_editor">KHMER EDITOR</string>
+    <string name="mallory_dress_in_gold">Mallory Dress In Gold</string>
+</resources>
