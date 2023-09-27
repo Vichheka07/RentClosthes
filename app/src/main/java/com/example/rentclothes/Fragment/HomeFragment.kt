@@ -1,3 +1,4 @@
+import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.rentclothes.CategoriesActivity
 import com.example.rentclothes.Fragment.KhmereditorFragment
 import com.example.rentclothes.Fragment.TrendingnowFragment
 import com.example.rentclothes.R
@@ -50,6 +52,10 @@ class HomeFragment:Fragment(){
             val fragment = KhmereditorFragment()
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
+        }
+        binding.imKhmer.setOnClickListener{
+            val intent = Intent(requireActivity(), CategoriesActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -29,6 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PostActivity"/>
+        <activity android:name=".CategoriesActivity"/>
     </application>
 
 
