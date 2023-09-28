@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_backgrownd_post"
+    android:paddingHorizontal="16dp"
+    android:orientation="vertical">
     <RelativeLayout
-        android:paddingHorizontal="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:id="@+id/text_filter"
-            android:paddingTop="16dp"
-            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="16dp"
             android:text="FILTER"
-            android:layout_alignParentStart="true"/>
+            android:textColor="@color/black"
+            android:textStyle="bold" />
         <ImageView
             android:paddingTop="6dp"
             android:layout_alignParentTop="true"
@@ -23,12 +26,89 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/control_button_sheets"/>
-
-        <ImageView
-            android:layout_alignBottom="@+id/text_filter"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_close" />
     </RelativeLayout>
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/XXS"
+            android:layout_alignParentStart="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/cycle_button"
+            android:textAlignment="center"
+            android:text="XXS"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/XS"
+            android:layout_marginStart="16dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="XS"
+            android:layout_toEndOf="@+id/XXS"
+            android:background="@drawable/cycle_button"/>
+        <TextView
+            android:id="@+id/S"
+            android:layout_marginStart="16dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toEndOf="@id/XS"
+            android:background="@drawable/cycle_button"
+            android:gravity="center"
+            android:text="S"/>
+        <TextView
+            android:id="@+id/M"
+            android:layout_marginStart="16dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/S"
+            android:background="@drawable/cycle_button"
+            android:text="M"/>
+        <TextView
+            android:layout_marginStart="16dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="L"
+            android:background="@drawable/cycle_button"
+            android:layout_toEndOf="@id/M"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By Price"/>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tend"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10$ - 20$"/>
+        <TextView
+            android:id="@+id/twenty_d"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/tend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20$ - 30$"/>
+        <TextView
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/twenty_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30$ - 40$"/>
+    </RelativeLayout>
+
 </LinearLayout>
