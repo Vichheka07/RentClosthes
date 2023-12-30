@@ -149,7 +149,7 @@ class PostActivity: AppCompatActivity() {
     }
     //    Button chenge color
     private fun chengePostbutton(button: TextView){
-    val selectedColor = resources.getColor(R.color.selected_button_color)
+    val selectedColor = resources.getColor(R.color.purple_700)
     (button.background as GradientDrawable).setColor(selectedColor)
     }
     @SuppressLint("ResourceAsColor")

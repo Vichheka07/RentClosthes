@@ -26,20 +26,16 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> {
                     loadFragment(HomeFragment())
-                    true
                 }
                 R.id.Favorite -> {
                     loadFragment(FavoritFragment())
-                    true
                 }
                 R.id.Card -> {
                     loadFragment(CardFragment())
-                    true
                 }R.id.Profile -> {
                     loadFragment(ProfileFragment())
                 }
                 else -> {
-                    false
                 }
             }
             true

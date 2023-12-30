@@ -1,22 +1,26 @@
 import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.rentclothes.adapter.ProductsAdapter
+import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.CategoriesActivity
 import com.example.rentclothes.Fragment.KhmereditorFragment
-import com.example.rentclothes.Fragment.TrendingnowFragment
 import com.example.rentclothes.R
+import com.example.rentclothes.viewModel.HomeScreenViewModel
 import com.example.rentclothes.databinding.HomeFragmentBinding
 
 
 class HomeFragment:Fragment(){
+    private val viewModel = HomeScreenViewModel()
     private lateinit var binding: HomeFragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,12 +41,11 @@ class HomeFragment:Fragment(){
         val imageSlider = view.findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList)
         resetButtonColors()
-        startFragment2()
+//        startFragment2()
         changeButtonColor(binding.TrendingNow)
         binding.TrendingNow.setOnClickListener{
-            val fragment = TrendingnowFragment()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
+//            transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
             resetButtonColors()
             changeButtonColor(binding.TrendingNow)
         }
@@ -51,13 +54,37 @@ class HomeFragment:Fragment(){
             changeButtonColor(binding.KhmerEditor)
             val fragment = KhmereditorFragment()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
+//            transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
         }
         binding.imKhmer.setOnClickListener{
             val intent = Intent(requireActivity(), CategoriesActivity::class.java)
             startActivity(intent)
         }
+        viewModel.loadHomeScreen()
+        viewModel.homescreenData.observe(viewLifecycleOwner) { resource ->
+            if (resource.status == Status.SUCCESS) {
+                val data = resource.data?.data
+                data?.let { items ->
+                    showProducts(items)
+                }
+//                Toast.makeText(requireContext(), "Success app", Toast.LENGTH_LONG).show()
+            } else if (resource.status == Status.ERROR) {
+                Toast.makeText(requireContext(), "Error while loading data from server", Toast.LENGTH_LONG).show()
+            }
+        }
+
     }
+
+    private fun showProducts(items: List<Datum>) {
+        val layoutManager = GridLayoutManager(context, 2)
+        binding.recyclerView1.layoutManager = layoutManager
+
+        val adapter = ProductsAdapter()
+        adapter.setUserList(items)
+        binding.recyclerView1.adapter = adapter
+    }
+
+
 
     private fun resetButtonColors() {
         val defaultColor = resources.getColor(R.color.default_button_color)
@@ -66,14 +93,8 @@ class HomeFragment:Fragment(){
     }
 
     private fun changeButtonColor(textView: TextView){
-        val selectedColor = resources.getColor(R.color.selected_button_color)
+        val selectedColor = resources.getColor(R.color.purple_700)
         (textView.background as GradientDrawable).setColor(selectedColor)
     }
-    private fun startFragment2(){
-        val fragment = TrendingnowFragment()
-        val transaction = fragmentManager?.beginTransaction()
-        transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
-        resetButtonColors()
-        changeButtonColor(binding.TrendingNow)
-    }
 }
+
