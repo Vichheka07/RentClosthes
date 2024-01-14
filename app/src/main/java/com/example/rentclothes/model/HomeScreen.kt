@@ -6,7 +6,7 @@ data class ApiItem (
 
 data class Datum (
     val id: Long,
-    val images: List<Image>,
+    val images: List<Image>?,
     val title: String,
     val describe: String,
     val price: String,

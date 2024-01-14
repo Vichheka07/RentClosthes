@@ -103,7 +103,7 @@
                 android:text="* Rent Price"/>
 
             <EditText
-                android:id="@+id/login_text_phone"
+                android:id="@+id/rent_price"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/text_d"
@@ -133,9 +133,9 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="7dp"
                 android:layout_width="match_parent"
-                android:layout_height="28dp"
+                android:layout_height="25dp"
                 android:text="Original Price"/>
             <TextView
                 android:layout_marginStart="4dp"
@@ -147,7 +147,7 @@
                 android:text="$"/>
 
             <EditText
-                android:id="@+id/login_text_phone1"
+                android:id="@+id/original_price"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -167,16 +167,16 @@
             />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="30dp">
             <TextView
+                android:gravity="center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="13dp"
                 android:layout_width="match_parent"
-                android:layout_height="28dp"
+                android:layout_height="40dp"
                 android:text="*Day for rent" />
 
             <EditText
-                android:id="@+id/login_text_phone3"
+                android:id="@+id/day_for_rent"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -205,21 +205,37 @@
             />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="35dp">
+
             <TextView
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="13dp"
-                android:layout_width="match_parent"
+                android:id="@+id/Category"
+                android:layout_width="wrap_content"
                 android:layout_height="28dp"
-                android:text="*Category"/>
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="*Category" />
+
             <ImageView
-                android:layout_marginStart="4dp"
-                android:layout_centerVertical="true"
-                android:id="@+id/text_d2"
+                android:id="@+id/arrow_next"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_arrow_next" />
+            <TextView
+                android:id="@+id/category"
+                android:gravity="center"
+                android:layout_marginEnd="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_next"/>
+                android:text=""
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/arrow_next"
+                android:layout_alignParentBottom="true"
+                />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -243,6 +259,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true">
                     <RadioGroup
+                        android:id="@+id/choos_Condition"
                         android:layout_width="wrap_content"
                         android:layout_height="55px"
                         android:layout_gravity="end"
@@ -366,6 +383,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true">
                 <RadioGroup
+                    android:id="@+id/choos_delivery"
                     android:layout_width="wrap_content"
                     android:layout_height="55px"
                     android:layout_gravity="end"
@@ -394,6 +412,7 @@
         </RelativeLayout>
     </LinearLayout>
     <TextView
+        android:id="@+id/bt_summit"
         android:layout_centerHorizontal="true"
         android:layout_width="292.65dp"
         android:layout_height="50dp"

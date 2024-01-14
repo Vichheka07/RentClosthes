@@ -7,12 +7,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.rentclothes.ApiService.ApiData
 import com.example.rentclothes.ApiService.Status
-import com.example.rentclothes.Service.ApiService
+import com.example.rentclothes.core.AppCore
+import com.example.rentclothes.model.client.ApiClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class HomeScreenViewModel:ViewModel(){
 
@@ -20,13 +19,7 @@ class HomeScreenViewModel:ViewModel(){
     val homescreenData: LiveData<ApiData<ApiItem>>
         get() =_homescreenData
     fun loadHomeScreen() {
-        val httpClient = Retrofit.Builder()
-            .baseUrl("https://rentclothes.online/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val apiService = httpClient.create(ApiService::class.java)
-        val task = apiService.loadHomeScreenList();
+        val task = ApiClient.get(AppCore.get().applicationContext).apiService.loadHomeScreenList();
         task.enqueue(object : Callback<ApiItem>{
             override fun onResponse(
                 call: Call<ApiItem>,
@@ -34,7 +27,6 @@ class HomeScreenViewModel:ViewModel(){
             ) {
                 if (response.isSuccessful) {
                     val apiData = ApiData(Status.SUCCESS, response.body())
-                    println("test  Success")
                     _homescreenData.postValue(apiData)
                 } else {
                     Log.e("API_ERROR", "API Call Failed: ${response.errorBody()?.string()}")
