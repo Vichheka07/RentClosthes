@@ -6,8 +6,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+
 
     <application
+        android:name=".core.AppCore"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -30,6 +33,9 @@
         </activity>
         <activity android:name=".PostActivity"/>
         <activity android:name=".CategoriesActivity"/>
+        <activity android:name=".SigninActivity"/>
+        <activity android:name=".SettingActivity"/>
+        <activity android:name=".ActivityPostCategories"/>
     </application>
 
 

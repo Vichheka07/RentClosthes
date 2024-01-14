@@ -17,6 +17,7 @@ import com.example.rentclothes.Fragment.KhmereditorFragment
 import com.example.rentclothes.R
 import com.example.rentclothes.viewModel.HomeScreenViewModel
 import com.example.rentclothes.databinding.HomeFragmentBinding
+import com.example.rentclothes.viewModel.SigninScreenViewModel
 
 
 class HomeFragment:Fragment(){
@@ -26,7 +27,7 @@ class HomeFragment:Fragment(){
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = HomeFragmentBinding.inflate(layoutInflater)
         return (binding.root)
     }
@@ -67,7 +68,6 @@ class HomeFragment:Fragment(){
                 data?.let { items ->
                     showProducts(items)
                 }
-//                Toast.makeText(requireContext(), "Success app", Toast.LENGTH_LONG).show()
             } else if (resource.status == Status.ERROR) {
                 Toast.makeText(requireContext(), "Error while loading data from server", Toast.LENGTH_LONG).show()
             }

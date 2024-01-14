@@ -30,10 +30,10 @@ class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = dataList[position]
         holder.binding.apply {
-            holder.binding.textMoney0.text = "${currentItem.price}/${currentItem.day} Day"
+            holder.binding.textMoney0.text = "${currentItem.price}$/${currentItem.day} Day"
             title.text = currentItem.title
             Size.text = "Size ${currentItem.size}"
-            Picasso.get().load(currentItem.images[0].url).into(imageUrl)
+            Picasso.get().load(currentItem.images?.get(0)?.url).into(imageUrl)
 
         }
     }
