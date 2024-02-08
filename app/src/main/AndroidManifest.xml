@@ -36,6 +36,9 @@
         <activity android:name=".SigninActivity"/>
         <activity android:name=".SettingActivity"/>
         <activity android:name=".ActivityPostCategories"/>
+        <activity android:name=".ProductDetailActivity"/>
+        <activity android:name=".RenNowActivity"/>
+        <activity android:name=".ShopActivity"/>
     </application>
 
 

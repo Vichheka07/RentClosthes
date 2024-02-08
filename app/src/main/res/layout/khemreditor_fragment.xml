@@ -154,10 +154,6 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="6dp"
                 app:cardCornerRadius="200dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/im_profile1"/>
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -378,10 +374,6 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="6dp"
                 app:cardCornerRadius="200dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/im_profile3"/>
             </androidx.cardview.widget.CardView>
 
             <TextView

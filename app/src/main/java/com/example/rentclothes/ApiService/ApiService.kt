@@ -1,6 +1,8 @@
 package com.example.rentclothes.Service
 import ApiItem
 import com.example.rentclothes.model.LoginRequest
+import com.example.rentclothes.model.RegisterRequest
+import com.example.rentclothes.model.ResgisterResponse
 import com.example.rentclothes.model.SiginScreen
 import com.example.rentclothes.model.postResponse
 import okhttp3.MultipartBody
@@ -18,6 +20,9 @@ interface ApiService {
 
     @POST("api/login")
     fun loadSignInScreen(@Body loginRequest: LoginRequest): Call<SiginScreen>
+
+    @POST("api/register")
+    fun loadSignUpScreen(@Body regiserRequest: RegisterRequest): Call<ResgisterResponse>
 
     @Multipart
     @POST("api/posts")

@@ -3,10 +3,12 @@ package com.example.rentclothes.model
 import com.google.gson.annotations.SerializedName
 
 data class SiginScreen(
-    @SerializedName("user") var user  : User,
-    @SerializedName("token") var token : String
+    @SerializedName("user")
+    var user  : Users,
+    @SerializedName("token")
+    var token : String
 )
-data class User(
+data class Users(
     @SerializedName("id")
     var id:Int,
     @SerializedName("name")

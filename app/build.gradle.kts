@@ -56,4 +56,6 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
     implementation("androidx.security:security-crypto-ktx:1.1.0-alpha06")
+    implementation ("me.relex:circleindicator:2.1.6")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 }

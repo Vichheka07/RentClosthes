@@ -10,4 +10,7 @@
     <string name="trending_now">TRENDING NOW</string>
     <string name="khmer_editor">KHMER EDITOR</string>
     <string name="mallory_dress_in_gold">Mallory Dress In Gold</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="email">Email</string>
 </resources>

@@ -18,7 +18,7 @@ class FavoritFragment:Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FavoritFragmentBinding.inflate(layoutInflater)
         return (binding.root)
     }

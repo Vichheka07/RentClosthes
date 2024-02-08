@@ -1,46 +1,51 @@
 package com.example.rentclothes
-
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.rentclothes.ApiService.Status
+import androidx.fragment.app.Fragment
+import com.example.rentclothes.Fragment.SigninFragment
+import com.example.rentclothes.Fragment.SignupFragment
 import com.example.rentclothes.databinding.ActivityLoginBinding
-import com.example.rentclothes.viewModel.SigninScreenViewModel
+import com.google.android.material.tabs.TabLayout
 
 class SigninActivity: AppCompatActivity (){
-    private val viewModel = SigninScreenViewModel()
     lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        viewModel.SiginScreenData.observe(this){ resource ->
-            if (resource.status == Status.SUCCESS) {
-                Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
-                val data = resource.data
-                finish()
-            } else if (resource.status == Status.ERROR) {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_LONG).show()
+        replaceFragment(SigninFragment())
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                // Handle tab select
+                if (tab != null) {
+                    // Handle the selected tab and replace the fragment in the FrameLayout
+                    when (tab.position) {
+                        0 -> {
+                            // Handle the first tab (Province) selection
+                            replaceFragment(SigninFragment())
+                        }
+                        1 -> {
+                            // Handle the second tab (Post) selection
+                            replaceFragment(SignupFragment())
+                        }
+                    }
+                }
             }
-        }
 
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                // Handle tab unselected if needed
+            }
 
-        binding.button.setOnClickListener {
-            val emailEditText = binding.editTextTextEmailAddress
-            val passwordEditText = binding.editTextTextPassword
-
-            // Retrieving the text from the EditText views inside the click listener
-            val email: String = emailEditText.text.toString().trim()
-            val password: String = passwordEditText.text.toString().trim()
-
-
-            // Print or log the values to see the data submitted
-            println("Email: $email, Password: $password")
-
-            // Call the ViewModel method with the retrieved values
-            viewModel.SignIn(email, password)
-        }
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                // Handle tab reselected if needed
+            }
+        })
+    }
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.layfragment, fragment)
+            .commit()
     }
 
 }

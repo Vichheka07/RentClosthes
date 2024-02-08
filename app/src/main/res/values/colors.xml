@@ -10,5 +10,6 @@
 
 <!--    Color custom app-->
     <color name="default_button_color">#CBCBCB</color>
+<!--    Color background gray-->
     <color name="background_color">#F5F5F5</color>
 </resources>

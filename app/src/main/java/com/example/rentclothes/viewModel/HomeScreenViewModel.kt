@@ -18,6 +18,8 @@ class HomeScreenViewModel:ViewModel(){
     private val _homescreenData = MutableLiveData<ApiData<ApiItem>>()
     val homescreenData: LiveData<ApiData<ApiItem>>
         get() =_homescreenData
+
+
     fun loadHomeScreen() {
         val task = ApiClient.get(AppCore.get().applicationContext).apiService.loadHomeScreenList();
         task.enqueue(object : Callback<ApiItem>{

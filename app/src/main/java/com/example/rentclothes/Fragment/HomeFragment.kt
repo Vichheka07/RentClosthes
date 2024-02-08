@@ -42,20 +42,14 @@ class HomeFragment:Fragment(){
         val imageSlider = view.findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList)
         resetButtonColors()
-//        startFragment2()
         changeButtonColor(binding.TrendingNow)
         binding.TrendingNow.setOnClickListener{
-            val transaction = fragmentManager?.beginTransaction()
-//            transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
             resetButtonColors()
             changeButtonColor(binding.TrendingNow)
         }
         binding.KhmerEditor.setOnClickListener{
             resetButtonColors()
             changeButtonColor(binding.KhmerEditor)
-            val fragment = KhmereditorFragment()
-            val transaction = fragmentManager?.beginTransaction()
-//            transaction?.replace(R.id.lyFragment2bt,fragment)?.commit()
         }
         binding.imKhmer.setOnClickListener{
             val intent = Intent(requireActivity(), CategoriesActivity::class.java)
