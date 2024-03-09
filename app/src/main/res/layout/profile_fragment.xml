@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/im_Profile"
-                android:text=""/>
+                android:text="Sao Vichheka"/>
             <ImageView
                 android:layout_marginStart="6dp"
                 android:layout_centerVertical="true"
@@ -254,49 +254,6 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="16dp"
                 android:text="My Style Bio" />
-        </RelativeLayout>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="160dp"
-            android:layout_height="63dp"
-            android:layout_marginEnd="27dp"
-            android:background="@drawable/custom_backgrownd_post">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Orders"
-                android:textSize="16dp" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_marginEnd="16dp"
-            android:layout_width="160dp"
-            android:layout_height="63dp"
-            android:background="@drawable/custom_backgrownd_post"
-            android:layout_alignParentEnd="true">
-            <ImageView
-                android:id="@+id/ic_clothes1"
-                android:layout_alignParentStart="true"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="6dp"
-                android:src="@drawable/ic_clothes"/>
-
-            <TextView
-                android:layout_toEndOf="@id/ic_clothes1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
-                android:text="My Seller" />
         </RelativeLayout>
     </RelativeLayout>
     <LinearLayout

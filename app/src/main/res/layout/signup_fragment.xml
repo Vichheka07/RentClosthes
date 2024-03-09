@@ -4,51 +4,64 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Full Name"/>
+        android:text="Input your name"/>
 
     <EditText
+        android:paddingStart="16dp"
         android:id="@+id/editTextTextname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_icsearch"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:hint="Full name"
         android:inputType="textPersonName" />
 
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/email"/>
+        android:text="Input your email"/>
     <EditText
+        android:paddingStart="16dp"
+        android:hint="Email"
+        android:background="@drawable/custom_icsearch"
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:inputType="textEmailAddress" />
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Choos password"/>
     <EditText
+        android:paddingStart="16dp"
+        android:hint="Password"
+        android:background="@drawable/custom_icsearch"
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:inputType="textPassword" />
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,9 +69,12 @@
         android:layout_marginTop="16dp"
         android:text="@string/confirm_password"/>
     <EditText
+        android:paddingStart="16dp"
+        android:hint="Password"
+        android:background="@drawable/custom_icsearch"
         android:id="@+id/confirm_password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"

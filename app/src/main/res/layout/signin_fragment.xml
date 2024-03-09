@@ -9,15 +9,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Email"/>
+        android:textColor="@color/black"
+        android:text="Input your email"/>
 
     <EditText
+        android:background="@drawable/custom_icsearch"
+        android:paddingStart="16dp"
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:hint="Email"
         android:inputType="textEmailAddress" />
 
     <TextView
@@ -25,16 +29,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Password"/>
+        android:textColor="@color/black"
+        android:text="Input your password"/>
     <EditText
+        android:paddingStart="16dp"
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:hint="Password"
+        android:background="@drawable/custom_icsearch"
         android:inputType="textPassword" />
-
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"/>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"

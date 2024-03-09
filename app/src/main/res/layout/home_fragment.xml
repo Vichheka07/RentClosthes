@@ -10,71 +10,32 @@
         android:layout_marginBottom="6dp"
         android:layout_marginStart="16dp"
         android:layout_width="match_parent"
-        android:layout_height="40dp">
-
-        <EditText
-            android:id="@+id/ic_search"
-            android:layout_width="0dp"
+        android:layout_height="35dp">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/ic_location"
-            android:width="1dp"
-            android:background="@drawable/custom_icsearch"
-            android:drawableStart="@drawable/ic_camerasearch"
-            android:drawablePadding="15dp"
-            android:hint="@string/search"
-            android:paddingStart="16dp"
-            tools:ignore="RtlSymmetry,TouchTargetSizeCheck,VisualLintTextFieldSize"
-            android:importantForAutofill="no"
-            android:inputType="textAutoComplete"
-            android:autofillHints="String"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/ic_search"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="45dp"
-            android:text="|"
-            android:layout_marginTop="6dp"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText" />
+            android:src="@drawable/rentclothes"/>
 
         <ImageView
-            android:id="@+id/ic_location"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/imageViews"
-            android:src="@drawable/ic_place"
-            android:contentDescription="Image location"
-            tools:ignore="HardcodedText" />
+            android:layout_marginRight="13dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageView5"
+            android:src="@drawable/ic_search" />
 
         <ImageView
-            android:layout_marginEnd="16dp"
-            android:id="@+id/imageViews"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/imageView5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/ic_chat"
-            app:layout_constraintBottom_toBottomOf="@+id/ic_search"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/ic_location"
-            android:importantForAccessibility="no" />
-
+            android:src="@drawable/ic_bell" />
     </RelativeLayout>
-    <View
-        android:id="@+id/line_13"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@drawable/line_13"
-        />
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
