@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imageRV"
         android:layout_width="match_parent"
         android:layout_height="393dp"
+        android:layout_centerInParent="true"
         app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_centerInParent="true"/>
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_backe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <LinearLayout
         android:id="@+id/slideDotLL"
         android:layout_width="match_parent"
@@ -22,6 +31,7 @@
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/imageRV"/>
     <TextView
+        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -29,13 +39,15 @@
         android:text="Cropped T-shirt With Print"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageRV" />
+        app:layout_constraintTop_toBottomOf="@+id/imageRV"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
     <LinearLayout
-        android:layout_marginTop="16dp"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,10 +55,10 @@
 
         <TextView
             android:id="@+id/day_for_rent"
-            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10 $ / 4day"
+            android:layout_marginLeft="16dp"
+            android:text="10 $ / 4day Rentail"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -70,22 +82,35 @@
             android:text="SAVE" />
 
         <ImageView
+            android:layout_gravity="center"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginLeft="6dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_favorite" />
+            android:src="@drawable/ic_action_name" />
 
     </LinearLayout>
+
     <TextView
-        android:id="@+id/Size"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Size M L XL"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/size"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:layout_marginStart="6dp"
+        android:id="@+id/Size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M L XL"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/description0"
@@ -100,13 +125,14 @@
 
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
         android:id="@+id/description1"
-        android:layout_width="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="SIMILAR STYLES"
         android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description0" />
 
@@ -137,6 +163,6 @@
         android:src="@drawable/bt_add_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
+    L
 
 </androidx.constraintlayout.widget.ConstraintLayout>

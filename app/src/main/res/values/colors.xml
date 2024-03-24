@@ -12,4 +12,5 @@
     <color name="default_button_color">#CBCBCB</color>
 <!--    Color background gray-->
     <color name="background_color">#F5F5F5</color>
+    <color name="background_color_home">#FFFFFFFF</color>
 </resources>

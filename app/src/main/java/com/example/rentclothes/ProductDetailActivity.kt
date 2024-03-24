@@ -38,7 +38,7 @@ class ProductDetailActivity:AppCompatActivity(){
         println("Hel ${imageList}")
 
         binding.description1.text = description
-        binding.Size.text = "Size $size"
+        binding.Size.text = "$size"
         binding.title.text =title
         binding.dayForRent.text ="$price$/$day Day"
         binding.dayForRent1.text ="$price$/$day Day"
@@ -47,6 +47,12 @@ class ProductDetailActivity:AppCompatActivity(){
         showproductdetail(testData)
         binding.imageCard.setOnClickListener{
             val intent = Intent(this,RenNowActivity::class.java)
+            intent.putExtra("title", title)
+            intent.putExtra("day", day)
+            intent.putExtra("description", description)
+            intent.putExtra("image", testData[0].url)
+            intent.putExtra("price", price)
+            intent.putExtra("size", size)
             startActivity(intent)
         }
 

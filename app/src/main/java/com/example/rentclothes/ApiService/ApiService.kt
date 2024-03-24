@@ -13,6 +13,7 @@ import retrofit2.http.Body
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
+import retrofit2.http.Path
 
 interface ApiService {
     @GET("api/posts")
@@ -23,6 +24,9 @@ interface ApiService {
 
     @POST("api/register")
     fun loadSignUpScreen(@Body regiserRequest: RegisterRequest): Call<ResgisterResponse>
+
+    @GET("api/{category}")
+    fun loadCategoryScreen(@Path("category") category: String): Call<ApiItem>
 
     @Multipart
     @POST("api/posts")
