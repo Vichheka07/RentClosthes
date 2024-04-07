@@ -3,6 +3,7 @@ import ApiItem
 import com.example.rentclothes.model.LoginRequest
 import com.example.rentclothes.model.RegisterRequest
 import com.example.rentclothes.model.ResgisterResponse
+import com.example.rentclothes.model.SearchRequestBody
 import com.example.rentclothes.model.SiginScreen
 import com.example.rentclothes.model.postResponse
 import okhttp3.MultipartBody
@@ -27,6 +28,9 @@ interface ApiService {
 
     @GET("api/{category}")
     fun loadCategoryScreen(@Path("category") category: String): Call<ApiItem>
+
+    @POST("api/posts/find")
+    fun loadSearchScreen(@Body title: SearchRequestBody): Call<ApiItem>
 
     @Multipart
     @POST("api/posts")

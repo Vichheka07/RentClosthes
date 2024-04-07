@@ -1,9 +1,10 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.rentclothes.Fragment.SigninFragment
 import com.example.rentclothes.Fragment.SignupFragment
+import com.example.rentclothes.R
 import com.example.rentclothes.databinding.ActivityLoginBinding
 import com.google.android.material.tabs.TabLayout
 

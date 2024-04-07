@@ -1,4 +1,4 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import android.os.Bundle
 import android.widget.Toast

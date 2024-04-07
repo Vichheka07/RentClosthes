@@ -17,7 +17,7 @@ class ApiClient private constructor(context: Context){
 
 
     private val httpClient = Retrofit.Builder()
-        .baseUrl("https://rentclothes.online/")
+        .baseUrl("http://192.168.27.36:8000/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()

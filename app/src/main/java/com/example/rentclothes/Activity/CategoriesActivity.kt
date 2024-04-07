@@ -1,4 +1,4 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import Datum
 import android.os.Bundle

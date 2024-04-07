@@ -1,4 +1,4 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import HomeFragment
 import android.content.Intent
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.myapplication.Fragment.FavoritFragment
 import com.example.rentclothes.Fragment.CardFragment
 import com.example.rentclothes.Fragment.ProfileFragment
+import com.example.rentclothes.R
 import com.example.rentclothes.core.AppCore
 import com.example.rentclothes.databinding.ActivityMainBinding
 import com.example.rentclothes.utility.AppEncryptedPreference
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         loadFragment(HomeFragment())
         binding.icPost.setOnClickListener{
             if(AppEncryptedPreference.get(AppCore.get().applicationContext).getApiTokend()!= null){
-                val intent = Intent(this,PostActivity::class.java)
+                val intent = Intent(this, PostActivity::class.java)
                 startActivity(intent)
             }else{
                 val intent = Intent(this, SigninActivity::class.java)
@@ -50,7 +51,9 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(this, SigninActivity::class.java)
                         startActivity(intent)
                     }
-                }R.id.Profile -> {
+                }
+
+                R.id.Profile -> {
                 if(AppEncryptedPreference.get(this).getApiTokend()!=null){
                     loadFragment(ProfileFragment())
                 }else{

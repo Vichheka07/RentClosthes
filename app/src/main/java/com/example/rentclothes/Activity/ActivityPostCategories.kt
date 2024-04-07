@@ -1,4 +1,4 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import android.app.Activity
 import android.content.Intent

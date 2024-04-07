@@ -7,17 +7,19 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.coding.materialcarousel.adapters.ImageAdapter
-import com.example.rentclothes.ProductDetailActivity
+import com.example.rentclothes.Activity.ProductDetailActivity
 import com.example.rentclothes.databinding.ViewHolderProductsBinding
 import com.example.rentclothes.model.ImageItem
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 
+
 class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
     private val dataList = ArrayList<Datum>()
     val imageTest =ArrayList<ImageItem>();
     var onProductsClickListener: ((Int, Datum)-> Unit)?= null
+    var imageUrl = "http://192.168.66.36/storage/4/1000010717.jpg"
+
 
     fun setUserList(userList: List<Datum>) {
         dataList.clear()
@@ -43,6 +45,7 @@ class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
             title.text = currentItem.title
             Size.text = "Size ${currentItem.size}"
             Picasso.get().load(currentItem.images?.get(0)?.url).into(imageUrl)
+            println("Heyy"+currentItem.images?.get(0)?.url);
         }
         holder.itemView.setOnClickListener {
             onProductsClickListener?.invoke(position, currentItem)

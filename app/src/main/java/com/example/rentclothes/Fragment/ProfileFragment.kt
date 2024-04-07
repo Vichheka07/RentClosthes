@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.rentclothes.ApiService.Status
-import com.example.rentclothes.SettingActivity
-import com.example.rentclothes.ShopActivity
+import com.example.rentclothes.Activity.SettingActivity
+import com.example.rentclothes.Activity.ShopActivity
 import com.example.rentclothes.databinding.ProfileFragmentBinding
 import com.example.rentclothes.viewModel.SigninScreenViewModel
 

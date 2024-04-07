@@ -1,21 +1,14 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.coding.materialcarousel.adapters.ImageAdapter
-import com.example.rentclothes.Fragment.CardFragment
 import com.example.rentclothes.databinding.ActivityProditailBinding
 import com.example.rentclothes.model.ImageItem
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import java.util.UUID
 
 class ProductDetailActivity:AppCompatActivity(){
     private lateinit var binding: ActivityProditailBinding
@@ -46,7 +39,7 @@ class ProductDetailActivity:AppCompatActivity(){
 
         showproductdetail(testData)
         binding.imageCard.setOnClickListener{
-            val intent = Intent(this,RenNowActivity::class.java)
+            val intent = Intent(this, RenNowActivity::class.java)
             intent.putExtra("title", title)
             intent.putExtra("day", day)
             intent.putExtra("description", description)

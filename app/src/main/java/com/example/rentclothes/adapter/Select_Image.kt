@@ -11,7 +11,7 @@ class ImageAdapter(private val context: Context, private val imageList: List<Uri
     RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.image_item_layout, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_images, parent, false)
         return ImageViewHolder(view)
     }
 
@@ -25,6 +25,6 @@ class ImageAdapter(private val context: Context, private val imageList: List<Uri
     }
 
     inner class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.ImageView)
+        val imageView: ImageView = itemView.findViewById(R.id.imageView)
     }
 }

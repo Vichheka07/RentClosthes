@@ -18,6 +18,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/rentclothes"/>
         <ImageView
+            android:id="@+id/ic_search"
             android:layout_marginRight="13dp"
             android:layout_width="35dp"
             android:layout_height="35dp"

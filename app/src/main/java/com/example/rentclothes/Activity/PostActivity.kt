@@ -1,4 +1,4 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import ImageAdapter
 import android.annotation.SuppressLint
@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rentclothes.R
 import com.example.rentclothes.databinding.ActivityPostBinding
 import com.example.rentclothes.viewModel.PostScreenViewModel
 import okhttp3.MediaType
@@ -42,7 +43,7 @@ class PostActivity: AppCompatActivity() {
     private var imageBody: MutableList<MultipartBody.Part> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        
+
         super.onCreate(savedInstanceState)
         binding = ActivityPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -178,9 +179,9 @@ class PostActivity: AppCompatActivity() {
             val sizeBody: RequestBody = RequestBody.create(MediaType.parse("text/plain"), size)
             val deliveryBody: RequestBody = RequestBody.create(MediaType.parse("text/plain"), delivery)
             println("Hello $imageBody,$titleBody,$description,$price,$original,$day,$category,$condition,$size,$delivery")
-                if (condition != null) {
-                    viewModel.postScreen(imageBody,titleBody,descriptionBody,priceBody,originalBody,dayBody,categoryBody,conditionBody,sizeBody,deliveryBody)
-                }
+            if (condition != null) {
+                viewModel.postScreen(imageBody,titleBody,descriptionBody,priceBody,originalBody,dayBody,categoryBody,conditionBody,sizeBody,deliveryBody)
+            }
         }
 
 
@@ -201,7 +202,7 @@ class PostActivity: AppCompatActivity() {
                 binding.textLimitFa.text = decount.toString()
             }
 
-            })
+        })
         //        Count text describe 1
         binding.faDescribe1.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -284,8 +285,8 @@ class PostActivity: AppCompatActivity() {
 
     //    Button chenge color
     private fun chengePostbutton(button: TextView){
-    val selectedColor = resources.getColor(R.color.purple_700)
-    (button.background as GradientDrawable).setColor(selectedColor)
+        val selectedColor = resources.getColor(R.color.purple_700)
+        (button.background as GradientDrawable).setColor(selectedColor)
     }
     @SuppressLint("ResourceAsColor")
     private fun resetButtonColors(vararg button: TextView){
@@ -308,8 +309,8 @@ class PostActivity: AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         changeStatusBarColor(R.color.white)
-            resetButtonColors(binding.btFree)
-            resetButtonColors(binding.btS,binding.btM,binding.btL)
-        }
-    // button show text categories
+        resetButtonColors(binding.btFree)
+        resetButtonColors(binding.btS,binding.btM,binding.btL)
     }
+    // button show text categories
+}

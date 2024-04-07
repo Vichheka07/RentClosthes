@@ -7,7 +7,7 @@
     android:paddingEnd="16dp"
     android:background="@color/background_color"
     android:paddingBottom="6dp"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
     <ImageView
         android:id="@+id/arrow_back"
         android:layout_width="wrap_content"
@@ -251,50 +251,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="28dp"
                 android:text="*  Condition"/>
-                <HorizontalScrollView
-                    android:layout_marginStart="6dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_toEndOf="@id/Condition"
+            <HorizontalScrollView
+                android:layout_marginStart="6dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/Condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <RadioGroup
+                    android:id="@+id/choos_Condition"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true">
-                    <RadioGroup
-                        android:id="@+id/choos_Condition"
+                    android:layout_height="55px"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+
+                    <RadioButton
                         android:layout_width="wrap_content"
-                        android:layout_height="55px"
-                        android:layout_gravity="end"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/radio_selector"
+                        android:button="@drawable/radio_null_select"
+                        android:paddingHorizontal="10dp"
+                        android:text="Brand new"
+                        tools:ignore="TouchTargetSizeCheck" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/radio_selector"
-                            android:button="@drawable/radio_null_select"
-                            android:paddingHorizontal="10dp"
-                            android:text="Brand new"
-                            tools:ignore="TouchTargetSizeCheck" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/radio_selector"
+                        android:button="@drawable/radio_null_select"
+                        android:paddingHorizontal="10dp"
+                        android:text="Almost new"
+                        tools:ignore="TouchTargetSizeCheck" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="6dp"
-                            android:background="@drawable/radio_selector"
-                            android:button="@drawable/radio_null_select"
-                            android:paddingHorizontal="10dp"
-                            android:text="Almost new"
-                            tools:ignore="TouchTargetSizeCheck" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="6dp"
-                            android:background="@drawable/radio_selector"
-                            android:button="@drawable/radio_null_select"
-                            android:paddingHorizontal="10dp"
-                            android:text="Good"
-                            tools:ignore="TouchTargetSizeCheck" />
-                    </RadioGroup>
-                </HorizontalScrollView>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/radio_selector"
+                        android:button="@drawable/radio_null_select"
+                        android:paddingHorizontal="10dp"
+                        android:text="Good"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </RadioGroup>
+            </HorizontalScrollView>
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -323,34 +323,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="55px"
                     android:orientation="horizontal">
-                        <TextView
-                            android:gravity="center"
-                            android:id="@+id/bt_S"
-                            android:paddingHorizontal="16dp"
-                            android:layout_marginEnd="6dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/radio_null_select"
-                            android:text="S"/>
-                        <TextView
-                            android:gravity="center"
-                            android:layout_marginEnd="6dp"
-                            android:id="@+id/bt_M"
-                            android:paddingHorizontal="16dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/radio_null_select"
-                            android:text="M" />
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/bt_S"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/radio_null_select"
+                        android:text="S"/>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginEnd="6dp"
+                        android:id="@+id/bt_M"
+                        android:paddingHorizontal="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/radio_null_select"
+                        android:text="M" />
 
-                        <TextView
-                            android:gravity="center"
-                            android:layout_marginEnd="6dp"
-                            android:id="@+id/bt_L"
-                            android:paddingHorizontal="16dp"
-                            android:background="@drawable/radio_null_select"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="L"/>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginEnd="6dp"
+                        android:id="@+id/bt_L"
+                        android:paddingHorizontal="16dp"
+                        android:background="@drawable/radio_null_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="L"/>
                     <TextView
                         android:gravity="center"
                         android:id="@+id/bt_Free"

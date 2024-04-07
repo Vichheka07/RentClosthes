@@ -15,12 +15,12 @@ import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.rentclothes.adapter.ProductsAdapter
 import com.example.rentclothes.ApiService.Status
-import com.example.rentclothes.CategoriesActivity
-import com.example.rentclothes.Fragment.KhmereditorFragment
+import com.example.rentclothes.Activity.CategoriesActivity
+import com.example.rentclothes.Activity.SearchActivity
+import com.example.rentclothes.Activity.SigninActivity
 import com.example.rentclothes.R
 import com.example.rentclothes.viewModel.HomeScreenViewModel
 import com.example.rentclothes.databinding.HomeFragmentBinding
-import com.example.rentclothes.viewModel.SigninScreenViewModel
 
 
 class HomeFragment:Fragment(){
@@ -78,6 +78,9 @@ class HomeFragment:Fragment(){
         binding.imHome.setOnClickListener{
             intent.putExtra("name", name[4]);
             startActivity(intent)
+        }
+        binding.icSearch.setOnClickListener{
+            startActivity(Intent(context, SearchActivity::class.java))
         }
         viewModel.loadHomeScreen()
         viewModel.homescreenData.observe(viewLifecycleOwner) { resource ->

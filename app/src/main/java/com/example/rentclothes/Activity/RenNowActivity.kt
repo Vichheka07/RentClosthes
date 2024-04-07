@@ -1,13 +1,12 @@
-package com.example.rentclothes
+package com.example.rentclothes.Activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.View
 import android.view.Window
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.rentclothes.R
 import com.example.rentclothes.core.AppCore
 import com.example.rentclothes.databinding.ActivityRentnowBinding
 import com.squareup.picasso.Picasso
