@@ -18,7 +18,6 @@ class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
     private val dataList = ArrayList<Datum>()
     val imageTest =ArrayList<ImageItem>();
     var onProductsClickListener: ((Int, Datum)-> Unit)?= null
-    var imageUrl = "http://192.168.66.36/storage/4/1000010717.jpg"
 
 
     fun setUserList(userList: List<Datum>) {

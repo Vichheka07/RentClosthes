@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,14 +16,15 @@ import com.example.rentclothes.adapter.ProductsAdapter
 import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.Activity.CategoriesActivity
 import com.example.rentclothes.Activity.SearchActivity
-import com.example.rentclothes.Activity.SigninActivity
 import com.example.rentclothes.R
+import com.example.rentclothes.core.CategoryCore
+import com.example.rentclothes.core.TrendingCore
 import com.example.rentclothes.viewModel.HomeScreenViewModel
 import com.example.rentclothes.databinding.HomeFragmentBinding
+import com.example.rentclothes.viewModel.CategoryScreenViewModel
 
 
 class HomeFragment:Fragment(){
-    private val viewModel = HomeScreenViewModel()
     private lateinit var binding: HomeFragmentBinding
     private val name = listOf<String>("KHMER","GRADUATION","WEDDING","WEEKEND","HOME")
     override fun onCreateView(
@@ -36,6 +36,8 @@ class HomeFragment:Fragment(){
         return (binding.root)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val categoryCore = CategoryCore.getInstance()
+        val trendingCore = TrendingCore.getInstance()
         val intent = Intent(requireActivity(), CategoriesActivity::class.java)
         super.onViewCreated(view, savedInstanceState)
         val imageList = ArrayList<SlideModel>() // Create image list
@@ -54,10 +56,14 @@ class HomeFragment:Fragment(){
         binding.TrendingNow.setOnClickListener{
             resetButtonColors()
             changeButtonColor(binding.TrendingNow)
+            trendingCore.initialize(binding)
+            trendingCore.changeCategory(viewLifecycleOwner)
         }
         binding.KhmerEditor.setOnClickListener{
             resetButtonColors()
             changeButtonColor(binding.KhmerEditor)
+            categoryCore.initialize(binding)
+            categoryCore.changeCategory("KHMER", viewLifecycleOwner)
         }
         binding.imKhmer.setOnClickListener{
             intent.putExtra("name", name[0]);
@@ -82,31 +88,10 @@ class HomeFragment:Fragment(){
         binding.icSearch.setOnClickListener{
             startActivity(Intent(context, SearchActivity::class.java))
         }
-        viewModel.loadHomeScreen()
-        viewModel.homescreenData.observe(viewLifecycleOwner) { resource ->
-            if (resource.status == Status.SUCCESS) {
-                val data = resource.data?.data
-                data?.let { items ->
-                    showProducts(items)
-                }
-            } else if (resource.status == Status.ERROR) {
-                Toast.makeText(requireContext(), "Error while loading data from server", Toast.LENGTH_LONG).show()
-            }
-        }
+        trendingCore.initialize(binding)
+        trendingCore.changeCategory(viewLifecycleOwner)
 
     }
-
-    private fun showProducts(items: List<Datum>) {
-        val layoutManager = GridLayoutManager(context, 2)
-        binding.recyclerView1.layoutManager = layoutManager
-
-        val adapter = ProductsAdapter()
-        adapter.setUserList(items)
-        binding.recyclerView1.adapter = adapter
-    }
-
-
-
     private fun resetButtonColors() {
         val defaultColor = resources.getColor(R.color.default_button_color)
         (binding.TrendingNow.background as GradientDrawable).setColor(defaultColor)
@@ -129,7 +114,5 @@ class HomeFragment:Fragment(){
             }
         }
     }
-
-
 }
 
