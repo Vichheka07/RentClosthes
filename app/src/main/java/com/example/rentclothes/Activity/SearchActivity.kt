@@ -33,6 +33,9 @@ class SearchActivity:AppCompatActivity() {
                 // Implement any additional logic you want to perform after text change.
             }
         })
+        binding.arrowBack.setOnClickListener {
+            finish()
+        }
         viewModel.searchscreenData.observe(this) { resource ->
             if (resource.status == Status.SUCCESS) {
                 val data = resource.data?.data
