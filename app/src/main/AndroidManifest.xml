@@ -43,6 +43,7 @@
         <activity android:name=".Activity.RenNowActivity"/>
         <activity android:name=".Activity.ShopActivity"/>
         <activity android:name=".Activity.SearchActivity"/>
+        <activity android:name=".Activity.LanguageActivity"/>
     </application>
 
 

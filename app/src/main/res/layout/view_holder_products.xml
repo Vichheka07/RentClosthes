@@ -18,8 +18,7 @@
         <ImageView
             android:id="@+id/image_url"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/im_khmerclothes2" />
+            android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

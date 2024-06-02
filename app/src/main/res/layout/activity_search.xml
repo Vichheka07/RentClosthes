@@ -18,13 +18,13 @@ android:layout_height="match_parent">
     <EditText
         android:layout_marginStart="6dp"
         android:paddingStart="10dp"
-        android:id="@+id/editText"
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="34dp"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/arrow_back"
-        android:hint="Search ..."
-        android:background="@drawable/custom_icsearch" />
+        android:hint="@string/search"
+        android:background="@drawable/custom_icsearch"/>
 
 </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView

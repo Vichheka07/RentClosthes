@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.rentclothes.Activity.LanguageActivity
 import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.Activity.SettingActivity
 import com.example.rentclothes.Activity.ShopActivity
@@ -38,6 +39,10 @@ class ProfileFragment : Fragment() {
         }
         binding.shopActivity.setOnClickListener{
             val intent = Intent(requireActivity(), ShopActivity::class.java)
+            startActivity(intent)
+        }
+        binding.language.setOnClickListener{
+            val intent = Intent(requireActivity(), LanguageActivity::class.java)
             startActivity(intent)
         }
 

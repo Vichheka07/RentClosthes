@@ -19,7 +19,7 @@ class SearchActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.editText.addTextChangedListener(object : TextWatcher {
+        binding.search.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // This method is called to notify you that, within s, the count characters beginning at start are about to be replaced by new text with length after.
             }
