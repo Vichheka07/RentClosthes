@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.rentclothes.Activity.ActivityMessage
 import com.example.rentclothes.adapter.ProductsAdapter
 import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.Activity.CategoriesActivity
@@ -105,13 +106,11 @@ class HomeFragment:Fragment(){
     private fun changeStatusBarColor(colorResId: Int) {
         activity?.let { fragmentActivity ->
             // Check if the version is at least Lollipop (API level 21)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                val window: Window = fragmentActivity.window
-                val color: Int = ContextCompat.getColor(fragmentActivity, colorResId)
+            val window: Window = fragmentActivity.window
+            val color: Int = ContextCompat.getColor(fragmentActivity, colorResId)
 
-                // Set the status bar color
-                window.statusBarColor = color
-            }
+            // Set the status bar color
+            window.statusBarColor = color
         }
     }
 }

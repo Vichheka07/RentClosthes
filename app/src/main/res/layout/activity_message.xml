@@ -22,8 +22,6 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="@string/my_address"/>
-
+            android:text="@string/message"/>
     </RelativeLayout>
-    
 </LinearLayout>

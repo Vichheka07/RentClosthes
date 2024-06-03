@@ -19,7 +19,7 @@
             android:src="@drawable/rentclothes"/>
         <ImageView
             android:id="@+id/ic_search"
-            android:layout_marginRight="13dp"
+            android:layout_marginEnd="13dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
@@ -27,7 +27,7 @@
             android:src="@drawable/ic_search" />
 
         <ImageView
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_centerVertical="true"
             android:id="@+id/imageView5"
             android:layout_width="35dp"
