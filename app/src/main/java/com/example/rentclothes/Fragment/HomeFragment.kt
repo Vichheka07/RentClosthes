@@ -89,6 +89,9 @@ class HomeFragment:Fragment(){
         binding.icSearch.setOnClickListener{
             startActivity(Intent(context, SearchActivity::class.java))
         }
+        binding.imageView5.setOnClickListener {
+            startActivity(Intent(requireActivity(), ActivityMessage::class.java))
+        }
         trendingCore.initialize(binding)
         trendingCore.changeCategory(viewLifecycleOwner)
 
