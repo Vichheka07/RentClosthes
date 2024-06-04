@@ -25,6 +25,9 @@ class LanguageActivity:AppCompatActivity() {
         binding.English.setOnClickListener{
             setLocale("en")
         }
+        binding.arrowBack.setOnClickListener {
+            finish();
+        }
         changeStatusBarColor(R.color.background_color)
     }
     private fun setLocale(languageCode: String) {

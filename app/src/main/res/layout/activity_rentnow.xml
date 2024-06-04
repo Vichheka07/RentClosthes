@@ -62,14 +62,13 @@
             android:src="@drawable/ic_arrow_next"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/paymentMethod"
         android:layout_marginHorizontal="16dp"
         android:paddingHorizontal="13dp"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/custom_backgrownd_post">
-
-
         <TextView
             android:layout_alignParentStart="true"
             android:layout_width="wrap_content"

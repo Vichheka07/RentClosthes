@@ -45,6 +45,8 @@
         <activity android:name=".Activity.SearchActivity"/>
         <activity android:name=".Activity.LanguageActivity"/>
         <activity android:name=".Activity.ActivityMessage"/>
+        <activity android:name=".Activity.AddressActivity"/>
+        <activity android:name=".Activity.ActivityPayment"/>
     </application>
 
 

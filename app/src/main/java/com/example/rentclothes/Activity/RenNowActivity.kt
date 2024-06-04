@@ -1,6 +1,7 @@
 package com.example.rentclothes.Activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import android.widget.ArrayAdapter
@@ -33,6 +34,14 @@ class RenNowActivity:AppCompatActivity() {
             android.R.layout.simple_list_item_checked,
             sizeArray
         )
+        binding.icLocation1.setOnClickListener {
+            val intent = Intent(this,AddressActivity::class.java)
+            startActivity(intent)
+        }
+        binding.paymentMethod.setOnClickListener {
+            val intent = Intent(this,ActivityPayment::class.java)
+            startActivity(intent)
+        }
     }
     private fun changeStatusBarColor(colorResId: Int) {
         // Check if the version is at least Lollipop (API level 21)
