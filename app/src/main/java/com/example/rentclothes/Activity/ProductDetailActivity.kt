@@ -12,7 +12,6 @@ import com.google.gson.reflect.TypeToken
 
 class ProductDetailActivity:AppCompatActivity(){
     private lateinit var binding: ActivityProditailBinding
-    private lateinit var pagechangeListener: ViewPager2.OnPageChangeCallback
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +26,10 @@ class ProductDetailActivity:AppCompatActivity(){
         val day = intent.getStringExtra("day")
         val price = intent.getStringExtra("price")
         val size = intent.getStringExtra("size")
+        val id = intent.getStringExtra("post_id");
         val description = intent.getStringExtra("description")
         println("Hel ${imageList}")
+
 
         binding.description1.text = description
         binding.Size.text = "$size"
@@ -40,6 +41,7 @@ class ProductDetailActivity:AppCompatActivity(){
         showproductdetail(testData)
         binding.imageCard.setOnClickListener{
             val intent = Intent(this, RenNowActivity::class.java)
+            intent.putExtra("id",id);
             intent.putExtra("title", title)
             intent.putExtra("day", day)
             intent.putExtra("description", description)

@@ -55,7 +55,7 @@ class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
                 imageTest.add(ImageItem(index.toString(),image.url))
             }
             val testJson = Gson().toJson(imageTest)
-
+            intent.putExtra("post_id", currentItem.id.toString());
             intent.putExtra("price", currentItem.price)
             intent.putExtra("day", currentItem.day)
             intent.putExtra("title", currentItem.title)
