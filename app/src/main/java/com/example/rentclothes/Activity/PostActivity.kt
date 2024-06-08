@@ -153,9 +153,6 @@ class PostActivity: AppCompatActivity() {
                 // You may want to use an AsyncTask, Thread, or any other mechanism to handle the network request
             }
         })
-        fun Name(name: String){
-            val category = name
-        }
 
         // Button summit post data
         binding.btSummit.setOnClickListener{

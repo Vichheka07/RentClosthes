@@ -42,7 +42,7 @@
 
     <EditText
         android:paddingStart="16sp"
-        android:id="@+id/editTextTextname"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:background="@drawable/custom_icsearch"
@@ -60,7 +60,8 @@
         android:layout_marginTop="16dp"
         android:text="number phone"/>
     <EditText
-        android:paddingStart="16dp"
+        android:id="@+id/editTextPhone"
+        android:paddingStart="16sp"
         android:hint="Your phone number"
         android:background="@drawable/custom_icsearch"
         android:layout_width="match_parent"
@@ -80,13 +81,12 @@
         android:paddingStart="16dp"
         android:hint="Address"
         android:background="@drawable/custom_icsearch"
-        android:id="@+id/password"
+        android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="textPassword" />
+        android:layout_marginEnd="16dp"/>
     <TextView
         android:textColor="@color/black"
         android:id="@+id/textView5"
@@ -99,13 +99,12 @@
         android:paddingStart="16dp"
         android:hint="Address Detail"
         android:background="@drawable/custom_icsearch"
-        android:id="@+id/confirm_password"
+        android:id="@+id/EditTextAddressDetail"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="textPassword" />
+        android:layout_marginEnd="16dp"/>
     <TextView
         android:layout_marginStart="16dp"
         android:textColor="@color/black"
@@ -122,7 +121,7 @@
         android:src="@drawable/im_add_photo"
         tools:ignore="RtlSymmetry" />
     <Button
-        android:id="@+id/button"
+        android:id="@+id/ButtonAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

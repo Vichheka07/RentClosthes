@@ -34,11 +34,6 @@ class CardAdapter :ListAdapter<CardItems,CardAdapter.ViewHolder>(DiffCallback())
             date.text = itemView.date
             textTitle.text = itemView.title
             textMoney.text = itemView.money
-            SpinnerSize.adapter = ArrayAdapter(
-                AppCore.get().applicationContext,
-                android.R.layout.simple_spinner_dropdown_item,
-                itemView.size
-            )
             Picasso.get().load(itemView.image).into(imageCard)
 
         }
