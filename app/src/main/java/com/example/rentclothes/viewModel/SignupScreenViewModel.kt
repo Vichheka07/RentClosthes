@@ -9,7 +9,6 @@ import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.core.AppCore
 import com.example.rentclothes.model.RegisterRequest
 import com.example.rentclothes.model.ResgisterResponse
-import com.example.rentclothes.model.SiginScreen
 import com.example.rentclothes.model.client.ApiClient
 import com.example.rentclothes.utility.AppEncryptedPreference
 import retrofit2.Call
@@ -23,7 +22,7 @@ class SignupScreenViewModel:ViewModel() {
 
     fun SignUp(name: String,email: String,password:String,password_confirmation:String){
         val registerRequest = RegisterRequest(name = name, email = email, password = password, password_confirmation = password_confirmation)
-        var task = ApiClient.get(AppCore.get().applicationContext).apiService.loadSignUpScreen(registerRequest);
+        var task = ApiClient.get().apiService.loadSignUpScreen(registerRequest);
         task.enqueue(object : Callback<ResgisterResponse> {
             override fun onResponse(
                 call: Call<ResgisterResponse>,

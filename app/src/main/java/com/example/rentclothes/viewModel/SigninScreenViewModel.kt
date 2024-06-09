@@ -29,7 +29,7 @@ class SigninScreenViewModel:ViewModel() {
             email = email,
             password = password,
         )
-        var task = ApiClient.get(AppCore.get().applicationContext).apiService.loadSignInScreen(requestLogin);
+        var task = ApiClient.get().apiService.loadSignInScreen(requestLogin);
         task.enqueue(object : Callback<SiginScreen> {
             override fun onResponse(
                 call: Call<SiginScreen>,

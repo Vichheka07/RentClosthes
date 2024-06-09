@@ -24,7 +24,6 @@ class CategoryCore private constructor() {
         }
     }
 
-
     fun initialize(binding: HomeFragmentBinding) {
         this.binding = binding
     }

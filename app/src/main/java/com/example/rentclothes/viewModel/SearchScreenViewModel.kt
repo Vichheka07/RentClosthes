@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.rentclothes.ApiService.ApiData
 import com.example.rentclothes.ApiService.Status
-import com.example.rentclothes.core.AppCore
 import com.example.rentclothes.model.SearchRequestBody
 import com.example.rentclothes.model.client.ApiClient
 import retrofit2.Call
@@ -20,7 +19,7 @@ class SearchScreenViewModel: ViewModel() {
         get() =_searchscreenData
 
     fun loadSearchScreen(title: String){
-        var task = ApiClient.get(AppCore.get().applicationContext).apiService.loadSearchScreen(
+        var task = ApiClient.get().apiService.loadSearchScreen(
             SearchRequestBody(title)
         );
         task.enqueue(object : Callback<ApiItem>{

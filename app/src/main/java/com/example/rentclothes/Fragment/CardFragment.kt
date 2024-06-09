@@ -5,18 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import android.widget.Adapter
-import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.R
 import com.example.rentclothes.adapter.CardAdapter
 import com.example.rentclothes.databinding.CardFragemntBinding
-import com.example.rentclothes.model.CardItems
+import com.example.rentclothes.model.CardItem
+import com.example.rentclothes.viewModel.CardScreenViewModel
+import com.google.android.material.tabs.TabLayout
 
 
 class CardFragment : Fragment() {
     private lateinit var binding:CardFragemntBinding
+    private var viewModel = CardScreenViewModel();
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,14 +33,52 @@ class CardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         changeStatusBarColor(R.color.background_color)
-        val itemsList = ArrayList<CardItems>()
-        CardScreen(itemsList);
+        viewModel.loadCategoryScreen("customer")
+        viewModel.cardscreenData.observe(viewLifecycleOwner) { resource ->
+            if (resource.status == Status.SUCCESS) {
+                val data = resource.data?.data
+                data?.let { items ->
+                    var test: List<CardItem>? = null;
+                    if (test != items) {
+                        test = items;
+                        CardScreen(test)
+                    } else {
+                        CardScreen(test)
+                    }
+                }
+            } else if (resource.status == Status.ERROR) {
+                Toast.makeText(
+                    requireContext(),
+                    "Error while loading data from server",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                when (tab.position) {
+                    0 -> viewModel.loadCategoryScreen("customer")
+                    1 -> viewModel.loadCategoryScreen("Seller")
+                }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+                // Handle tab unselected
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab) {
+                // Handle tab reselected
+            }
+        })
     }
 
-    private fun CardScreen(itemsCard: ArrayList<CardItems>) {
+
+    private fun CardScreen(itemsCard: List<CardItem>) {
+        val layoutManager = LinearLayoutManager(requireContext())
+        binding.imageCard.layoutManager = layoutManager
         val adapter = CardAdapter();
+        adapter.setUserList(itemsCard)
         binding.imageCard.adapter =adapter
-        adapter.submitList(itemsCard)
 
     }
 

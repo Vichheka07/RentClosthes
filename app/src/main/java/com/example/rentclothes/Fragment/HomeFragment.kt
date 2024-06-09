@@ -1,6 +1,5 @@
 import android.content.Intent
 import android.graphics.drawable.GradientDrawable
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,20 +8,15 @@ import android.view.Window
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.rentclothes.Activity.ActivityMessage
-import com.example.rentclothes.adapter.ProductsAdapter
-import com.example.rentclothes.ApiService.Status
 import com.example.rentclothes.Activity.CategoriesActivity
 import com.example.rentclothes.Activity.SearchActivity
 import com.example.rentclothes.R
 import com.example.rentclothes.core.CategoryCore
 import com.example.rentclothes.core.TrendingCore
-import com.example.rentclothes.viewModel.HomeScreenViewModel
 import com.example.rentclothes.databinding.HomeFragmentBinding
-import com.example.rentclothes.viewModel.CategoryScreenViewModel
 
 
 class HomeFragment:Fragment(){

@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.rentclothes.ApiService.ApiData
 import com.example.rentclothes.ApiService.Status
-import com.example.rentclothes.core.AppCore
 import com.example.rentclothes.model.client.ApiClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,7 +20,7 @@ class HomeScreenViewModel:ViewModel(){
 
 
     fun loadHomeScreen() {
-        val task = ApiClient.get(AppCore.get().applicationContext).apiService.loadHomeScreenList();
+        val task = ApiClient.get().apiService.loadHomeScreenList();
         task.enqueue(object : Callback<ApiItem>{
             override fun onResponse(
                 call: Call<ApiItem>,

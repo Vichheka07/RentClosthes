@@ -1,5 +1,6 @@
 package com.example.rentclothes.Service
 import ApiItem
+import com.example.rentclothes.model.CardItems
 import com.example.rentclothes.model.LoginRequest
 import com.example.rentclothes.model.OrderReguest
 import com.example.rentclothes.model.RegisterRequest
@@ -34,6 +35,10 @@ interface ApiService {
     fun loadSearchScreen(@Body title: SearchRequestBody): Call<ApiItem>
     @POST("api/posts/orders")
     fun loadOrderScreen(@Body order: OrderReguest): Call<postResponse>
+    @GET("api/orders/customer")
+    fun loadCustomerScreen(): Call<CardItems>
+    @GET("api/orders/renter")
+    fun loadRenterScreen(): Call<CardItems>
 
     @Multipart
     @POST("api/posts")

@@ -2,56 +2,20 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="6dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_marginTop="6dp"
-            android:paddingHorizontal="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/day_for_rent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4 Days Rental"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    />
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:text="5 Sep - 9 Sep"/>
-        </RelativeLayout>
-        <View
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@drawable/line_13"
-            />
-        <RelativeLayout
-            android:layout_marginTop="6dp"
             android:paddingEnd="16dp"
             android:layout_width="match_parent"
             android:layout_height="119dp">
-                <CheckBox
-                    android:layout_centerVertical="true"
-                    android:id="@+id/checkbox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"/>
                 <androidx.cardview.widget.CardView
                     android:layout_marginStart="6dp"
                     android:id="@+id/Image_Product0"
                     android:layout_width="80dp"
                     android:layout_height="119dp"
-                    android:layout_toEndOf="@+id/checkbox"
                     android:layout_alignParentTop="true"
                     android:background="@color/cardview_dark_background"
                     app:cardCornerRadius="13dp">
@@ -60,41 +24,45 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
                 </androidx.cardview.widget.CardView>
+
                 <TextView
                     android:id="@+id/text_title"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_toEndOf="@+id/Image_Product0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mallory Dress In Gold"/>
-                <TextView
-                    android:id="@+id/text_money"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="6dp"
                     android:layout_marginTop="6dp"
+                    android:layout_marginEnd="106dp"
+                    android:layout_toEndOf="@+id/Image_Product0"
+                    android:text="Mallory Dress In Gold" />
+
+                <TextView
+                    android:id="@+id/text_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="US $ 25.99"
                     android:layout_below="@id/text_title"
                     android:layout_alignStart="@+id/text_title"
-                    />
-                <ImageView
-                    android:layout_marginStart="6dp"
-                    android:id="@+id/ic_delete1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_delete"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentEnd="true"
-                    />
+                    android:layout_marginTop="6dp"
+                    android:text="US $ 25.99" />
 
-                <Spinner
-                    android:id="@+id/Spinner_Size"
+                <TextView
+                    android:id="@+id/orderDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/text_money"
+                    android:layout_alignTop="@+id/text_title"
+                    android:layout_alignParentEnd="true"
+                    android:text="Date: 25 sep" />
+
+                <TextView
+                    android:id="@+id/text_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/text_price"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="6dp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_marginBottom="16dp"
+                    android:text="Rent: 3 Day" />
+
+
         </RelativeLayout>
 </LinearLayout>

@@ -18,7 +18,7 @@ class RentNowscreenViewModel: ViewModel() {
         get() = _RentNowScreenData
 
     fun orderScreen(orders: OrderReguest) {
-        val task = ApiClient.get(AppCore.get().applicationContext).apiService.loadOrderScreen(orders)
+        val task = ApiClient.get().apiService.loadOrderScreen(orders)
         task.enqueue(object : Callback<postResponse> {
             override fun onResponse(
                 call: Call<postResponse>,

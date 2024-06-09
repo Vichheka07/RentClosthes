@@ -3,7 +3,6 @@ package com.example.rentclothes.viewModel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.rentclothes.core.AppCore
 import com.example.rentclothes.model.client.ApiClient
 import com.example.rentclothes.model.postResponse
 import okhttp3.MultipartBody
@@ -22,7 +21,7 @@ class PostScreenViewModel : ViewModel() {
         orgprice: RequestBody, day: RequestBody, category: RequestBody, condition: RequestBody,
         size: RequestBody, delivery: RequestBody
     ) {
-        val task = ApiClient.get(AppCore.get().applicationContext).apiService.loadPostScreen(images,
+        val task = ApiClient.get().apiService.loadPostScreen(images,
             title,describe,price,orgprice,day,category,condition,size,delivery)
         task.enqueue(object : Callback<postResponse> {
             override fun onResponse(
