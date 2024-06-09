@@ -175,7 +175,6 @@ class PostActivity: AppCompatActivity() {
             val conditionBody: RequestBody = RequestBody.create(MediaType.parse("text/plain"), condition)
             val sizeBody: RequestBody = RequestBody.create(MediaType.parse("text/plain"), size)
             val deliveryBody: RequestBody = RequestBody.create(MediaType.parse("text/plain"), delivery)
-            println("Hello $imageBody,$titleBody,$description,$price,$original,$day,$category,$condition,$size,$delivery")
             if (condition != null) {
                 viewModel.postScreen(imageBody,titleBody,descriptionBody,priceBody,originalBody,dayBody,categoryBody,conditionBody,sizeBody,deliveryBody)
             }

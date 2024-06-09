@@ -1,7 +1,9 @@
 package com.example.rentclothes.Activity
 
 import HomeFragment
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -10,8 +12,10 @@ import com.example.rentclothes.Fragment.CardFragment
 import com.example.rentclothes.Fragment.ProfileFragment
 import com.example.rentclothes.R
 import com.example.rentclothes.core.AppCore
+import com.example.rentclothes.core.LanguageCore
 import com.example.rentclothes.databinding.ActivityMainBinding
 import com.example.rentclothes.utility.AppEncryptedPreference
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        LanguageCore.init(this)
+        setLocale(LanguageCore.myData)
         loadFragment(HomeFragment())
         binding.icPost.setOnClickListener{
             if(AppEncryptedPreference.get(AppCore.get().applicationContext).getApiTokend()!= null){
@@ -71,5 +77,18 @@ class MainActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.lyFragment, fragment)
         transaction.commit()
+    }
+    private fun setLocale(languageCode: String?) {
+        val locale = languageCode?.let { Locale(it) }
+        if (locale != null) {
+            Locale.setDefault(locale)
+        }
+        val configuration = Configuration()
+        configuration.setLocale(locale)
+        resources.updateConfiguration(configuration, resources.displayMetrics)
+        val sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("Language", languageCode)
+        editor.apply()
     }
 }

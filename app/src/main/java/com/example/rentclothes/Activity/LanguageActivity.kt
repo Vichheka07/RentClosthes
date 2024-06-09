@@ -9,6 +9,7 @@ import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.rentclothes.R
+import com.example.rentclothes.core.LanguageCore
 import com.example.rentclothes.databinding.ActivityLanguageBinding
 import java.util.Locale
 
@@ -18,21 +19,24 @@ class LanguageActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLanguageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.Khmer.setOnClickListener{
             setLocale("km")
+            LanguageCore.myData = "km";
         }
         binding.English.setOnClickListener{
             setLocale("en")
+            LanguageCore.myData = "en";
         }
         binding.arrowBack.setOnClickListener {
             finish();
         }
         changeStatusBarColor(R.color.background_color)
     }
-    private fun setLocale(languageCode: String) {
-        val locale = Locale(languageCode)
-        Locale.setDefault(locale)
+    private fun setLocale(languageCode: String?) {
+        val locale = languageCode?.let { Locale(it) }
+        if (locale != null) {
+            Locale.setDefault(locale)
+        }
         val configuration = Configuration()
         configuration.setLocale(locale)
         resources.updateConfiguration(configuration, resources.displayMetrics)
