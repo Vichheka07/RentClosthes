@@ -47,6 +47,7 @@
         <activity android:name=".Activity.ActivityMessage"/>
         <activity android:name=".Activity.AddressActivity"/>
         <activity android:name=".Activity.ActivityPayment"/>
+        <activity android:name=".Activity.RentProductActivity"/>
     </application>
 
 

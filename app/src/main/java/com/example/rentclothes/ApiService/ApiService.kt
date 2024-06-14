@@ -3,6 +3,7 @@ import ApiItem
 import com.example.rentclothes.model.CardItems
 import com.example.rentclothes.model.LoginRequest
 import com.example.rentclothes.model.OrderReguest
+import com.example.rentclothes.model.OrderUpdateRequest
 import com.example.rentclothes.model.RegisterRequest
 import com.example.rentclothes.model.ResgisterResponse
 import com.example.rentclothes.model.SearchRequestBody
@@ -15,6 +16,7 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Part
 import retrofit2.http.Path
 
@@ -39,7 +41,11 @@ interface ApiService {
     fun loadCustomerScreen(): Call<CardItems>
     @GET("api/orders/renter")
     fun loadRenterScreen(): Call<CardItems>
-
+    @Multipart
+    @POST("api/posts/profile")
+    fun uploadProfileScreen(@Part image: MutableList<MultipartBody.Part>): Call<postResponse>
+    @PUT("api/orders/renter")
+    fun updateOrderScreen(@Body orderUpdateRequest: OrderUpdateRequest): Call<postResponse>
     @Multipart
     @POST("api/posts")
     fun loadPostScreen(

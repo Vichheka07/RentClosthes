@@ -21,6 +21,7 @@ import com.google.android.material.tabs.TabLayout
 class CardFragment : Fragment() {
     private lateinit var binding:CardFragemntBinding
     private var viewModel = CardScreenViewModel();
+    private var screen: String = "";
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,7 +33,7 @@ class CardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        changeStatusBarColor(R.color.background_color)
+        changeStatusBarColor(R.color.background_color_home)
         viewModel.loadCategoryScreen("customer")
         viewModel.cardscreenData.observe(viewLifecycleOwner) { resource ->
             if (resource.status == Status.SUCCESS) {
@@ -57,8 +58,13 @@ class CardFragment : Fragment() {
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when (tab.position) {
-                    0 -> viewModel.loadCategoryScreen("customer")
-                    1 -> viewModel.loadCategoryScreen("Seller")
+                    0 -> {
+                        viewModel.loadCategoryScreen("customer")
+                        screen = "customer"
+                    }
+                    1 -> {viewModel.loadCategoryScreen("Seller")
+                          screen = "seller"
+                    }
                 }
             }
 
@@ -78,16 +84,19 @@ class CardFragment : Fragment() {
         binding.imageCard.layoutManager = layoutManager
         val adapter = CardAdapter();
         adapter.setUserList(itemsCard)
+        adapter.addItems(screen)
         binding.imageCard.adapter =adapter
 
     }
 
     private fun changeStatusBarColor(colorResId: Int) {
-        // Check if the version is at least Lollipop (API level 21)
-        val window: Window = requireActivity().window
-        val color: Int = ContextCompat.getColor(requireContext(), colorResId)
+        activity?.let { fragmentActivity ->
+            // Check if the version is at least Lollipop (API level 21)
+            val window: Window = fragmentActivity.window
+            val color: Int = ContextCompat.getColor(fragmentActivity, colorResId)
 
-        // Set the status bar color
-        window.statusBarColor = color
+            // Set the status bar color
+            window.statusBarColor = color
+        }
     }
 }
