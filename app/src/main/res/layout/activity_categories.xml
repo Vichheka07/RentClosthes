@@ -22,7 +22,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="KHMER"/>
+            android:text="@string/khmer"/>
         <ImageView
             android:id="@+id/ic_filter"
             android:layout_centerVertical="true"

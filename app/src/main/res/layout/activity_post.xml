@@ -53,7 +53,7 @@
         android:layout_height="100dp"
         android:layout_below="@id/post_1"
         android:gravity="top"
-        android:hint="*Describe what you are rent in detail to more user"/>
+        android:hint="@string/post_title"/>
 
     <TextView
         android:id="@+id/text_limit_fa"
@@ -74,7 +74,7 @@
         android:layout_height="131dp"
         android:layout_below="@id/fa_Describe"
         android:gravity="top"
-        android:hint="*Describe what you are rent in detail to more user"/>
+        android:hint="@string/post_description"/>
     <TextView
         android:id="@+id/text_limit_fa1"
         android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="* Rent Price"/>
+                android:text="@string/rent_price"/>
 
             <EditText
                 android:id="@+id/rent_price"
@@ -136,7 +136,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:text="Original Price"/>
+                android:text="@string/original_price"/>
             <TextView
                 android:layout_marginStart="4dp"
                 android:layout_centerVertical="true"
@@ -173,7 +173,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="*Day for rent" />
+                android:text="@string/day_for_rent" />
 
             <EditText
                 android:id="@+id/day_for_rent"
@@ -215,7 +215,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:gravity="center"
-                android:text="*Category" />
+                android:text="@string/category" />
 
             <ImageView
                 android:id="@+id/arrow_next"
@@ -245,12 +245,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/Condition"
-                android:layout_marginTop="13dp"
                 android:layout_width="wrap_content"
                 android:layout_height="28dp"
-                android:text="*  Condition"/>
+                android:layout_marginTop="13dp"
+                android:text="@string/condition" />
             <HorizontalScrollView
                 android:layout_marginStart="6dp"
                 android:layout_alignParentEnd="true"
@@ -271,7 +272,7 @@
                         android:background="@drawable/radio_selector"
                         android:button="@drawable/radio_null_select"
                         android:paddingHorizontal="10dp"
-                        android:text="Brand new"
+                        android:text="@string/brand_new"
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <RadioButton
@@ -281,7 +282,7 @@
                         android:background="@drawable/radio_selector"
                         android:button="@drawable/radio_null_select"
                         android:paddingHorizontal="10dp"
-                        android:text="Almost new"
+                        android:text="@string/almost_new"
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <RadioButton
@@ -291,7 +292,7 @@
                         android:background="@drawable/radio_selector"
                         android:button="@drawable/radio_null_select"
                         android:paddingHorizontal="10dp"
-                        android:text="Good"
+                        android:text="@string/good"
                         tools:ignore="TouchTargetSizeCheck" />
                 </RadioGroup>
             </HorizontalScrollView>
@@ -310,7 +311,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="28dp"
                 android:layout_marginTop="13dp"
-                android:text="*  Size" />
+                android:text="@string/size" />
 
             <HorizontalScrollView
                 android:layout_centerVertical="true"
@@ -375,7 +376,7 @@
                 android:layout_marginTop="13dp"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
-                android:text="*  Delivery Method" />
+                android:text="@string/delivery_method" />
             <HorizontalScrollView
                 android:layout_marginStart="6dp"
                 android:layout_alignParentEnd="true"
@@ -395,7 +396,7 @@
                         android:background="@drawable/radio_selector"
                         android:button="@drawable/radio_null_select"
                         android:paddingHorizontal="10dp"
-                        android:text="Face To Face"
+                        android:text="@string/face_to_face"
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <RadioButton
@@ -405,7 +406,7 @@
                         android:background="@drawable/radio_selector"
                         android:button="@drawable/radio_null_select"
                         android:paddingHorizontal="10dp"
-                        android:text="Delivery"
+                        android:text="@string/delivery"
                         tools:ignore="TouchTargetSizeCheck" />
                 </RadioGroup>
             </HorizontalScrollView>

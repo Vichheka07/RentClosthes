@@ -220,7 +220,7 @@
                 android:layout_alignTop="@+id/ic_idcard"
                 android:layout_marginStart="16dp"
                 android:layout_toEndOf="@+id/ic_idcard"
-                android:text="Identity Card" />
+                android:text="@string/identity_card" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -282,7 +282,7 @@
                 android:layout_marginStart="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="Find Friends" />
+                android:text="@string/find_friends" />
         </LinearLayout>
         <View
             android:layout_marginTop="6dp"
@@ -309,7 +309,7 @@
                 android:layout_marginStart="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="Profile" />
+                android:text="@string/profile" />
         </LinearLayout>
         <View
             android:layout_marginTop="6dp"
@@ -362,7 +362,7 @@
                 android:layout_marginStart="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="My Shop Activity" />
+                android:text="@string/my_shop_activity" />
         </LinearLayout>
         <View
             android:layout_marginTop="6dp"
@@ -387,7 +387,7 @@
                 android:layout_marginStart="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="System Settings" />
+                android:text="@string/system_settings" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

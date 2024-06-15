@@ -38,7 +38,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginTop="24dp"
-    android:text="Name"/>
+    android:text="@string/name"/>
 
     <EditText
         android:paddingStart="16sp"
@@ -49,7 +49,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Full name"
+        android:hint="@string/full_name"
         android:inputType="textPersonName" />
 
     <TextView
@@ -58,11 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="number phone"/>
+        android:text="@string/number_phone"/>
     <EditText
         android:id="@+id/editTextPhone"
         android:paddingStart="16sp"
-        android:hint="Your phone number"
+        android:hint="@string/your_phone_number"
         android:background="@drawable/custom_icsearch"
         android:layout_width="match_parent"
         android:layout_height="43dp"
@@ -79,7 +79,7 @@
         android:text="Address"/>
     <EditText
         android:paddingStart="16dp"
-        android:hint="Address"
+        android:hint="@string/address"
         android:background="@drawable/custom_icsearch"
         android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
@@ -94,10 +94,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Address detail"/>
+        android:text="@string/address_detail"/>
     <EditText
         android:paddingStart="16dp"
-        android:hint="Address Detail"
+        android:hint="@string/address_detail"
         android:background="@drawable/custom_icsearch"
         android:id="@+id/EditTextAddressDetail"
         android:layout_width="match_parent"

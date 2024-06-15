@@ -22,6 +22,6 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="Message Center"/>
+            android:text="@string/message_center"/>
     </RelativeLayout>
 </LinearLayout>

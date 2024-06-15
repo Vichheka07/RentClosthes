@@ -4,6 +4,7 @@ import com.example.rentclothes.model.CardItems
 import com.example.rentclothes.model.LoginRequest
 import com.example.rentclothes.model.OrderReguest
 import com.example.rentclothes.model.OrderUpdateRequest
+import com.example.rentclothes.model.ProfileResponse
 import com.example.rentclothes.model.RegisterRequest
 import com.example.rentclothes.model.ResgisterResponse
 import com.example.rentclothes.model.SearchRequestBody
@@ -43,7 +44,9 @@ interface ApiService {
     fun loadRenterScreen(): Call<CardItems>
     @Multipart
     @POST("api/posts/profile")
-    fun uploadProfileScreen(@Part image: MutableList<MultipartBody.Part>): Call<postResponse>
+    fun uploadProfileScreen(@Part image: List<MultipartBody.Part>): Call<postResponse>
+    @GET("api/posts/profile/show")
+    fun loadProfileScreen(): Call<ProfileResponse>
     @PUT("api/orders/renter")
     fun updateOrderScreen(@Body orderUpdateRequest: OrderUpdateRequest): Call<postResponse>
     @Multipart

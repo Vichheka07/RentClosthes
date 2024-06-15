@@ -11,7 +11,7 @@
         android:layout_gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="Message Center"/>
+        android:text="@string/rent_center"/>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
@@ -19,12 +19,12 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ORDER"
+            android:text="@string/order"
             />
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SELLING"
+            android:text="@string/selling"
             />
     </com.google.android.material.tabs.TabLayout>
     <androidx.recyclerview.widget.RecyclerView

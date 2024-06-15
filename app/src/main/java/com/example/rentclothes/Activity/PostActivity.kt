@@ -257,7 +257,7 @@ class PostActivity: AppCompatActivity() {
                     val file = File(getRealPathFromURI(imageUri))
                     val requestFile =
                         RequestBody.create(MediaType.parse("multipart/form-data"), file)
-                    val part = MultipartBody.Part.createFormData("images[]", file.name, requestFile)
+                    val part = MultipartBody.Part.createFormData("image", file.name, requestFile)
                     imageBody.add(part)
                     selectedImagesList.add(imageUri)
                 }

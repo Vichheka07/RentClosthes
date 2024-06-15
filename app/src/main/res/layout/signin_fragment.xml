@@ -10,7 +10,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:textColor="@color/black"
-        android:text="Input your email"/>
+        android:text="@string/input_your_email"/>
 
     <EditText
         android:background="@drawable/custom_icsearch"
@@ -21,7 +21,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress" />
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:textColor="@color/black"
-        android:text="Input your password"/>
+        android:text="@string/input_your_password"/>
     <EditText
         android:paddingStart="16dp"
         android:id="@+id/editTextTextPassword"
@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textColor="@color/black"
-        android:hint="Password"
+        android:hint="@string/password"
         android:background="@drawable/custom_icsearch"
         android:inputType="textPassword" />
     <TextView
@@ -48,7 +48,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot password?"/>
+        android:text="@string/forgot_password"/>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
@@ -56,5 +56,5 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:text="SIGN IN"/>
+        android:text="@string/sign_in"/>
 </LinearLayout>

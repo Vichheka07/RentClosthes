@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Setting"
+            android:text="@string/setting"
             android:textColor="@color/black"
             android:textStyle="bold"/>
     </RelativeLayout>
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/custom_bt_post"
-        android:text="Log Out"
+        android:text="@string/log_out"
         android:gravity="center"
         android:textSize="26sp"
         android:textAlignment="center"

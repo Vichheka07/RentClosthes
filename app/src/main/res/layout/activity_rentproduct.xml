@@ -54,13 +54,16 @@
         android:layout_marginHorizontal="16dp">
 
         <TextView
+            android:textAlignment="textEnd"
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/textView11"
             android:text="title" />
 
         <TextView
@@ -70,7 +73,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="16dp"
             android:layout_marginStart="10dp"
-            android:text="title" />
+            android:text="@string/title" />
 
         <TextView
             android:layout_marginTop="16dp"
@@ -80,7 +83,7 @@
             android:layout_below="@+id/textView11"
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
-            android:text="orderstatus" />
+            android:text="@string/orderstatus" />
 
         <TextView
             android:id="@+id/order_status"
@@ -90,7 +93,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="10dp"
-            android:text="orderstatus" />
+            android:text="@string/orderstatus" />
 
         <TextView
             android:id="@+id/textView12"
@@ -100,7 +103,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:text="name"/>
+            android:text="@string/name"/>
 
         <TextView
             android:id="@+id/text_name"
@@ -120,7 +123,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:text="price" />
+            android:text="@string/price" />
 
         <TextView
             android:id="@+id/id_price"
@@ -141,7 +144,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:text="day" />
+            android:text="@string/day" />
 
         <TextView
             android:id="@+id/id_day"
@@ -162,7 +165,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:text="delivery" />
+            android:text="@string/delivery" />
 
         <TextView
             android:id="@+id/id_delivery"
@@ -183,7 +186,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:text="size" />
+            android:text="@string/size" />
 
         <TextView
             android:id="@+id/id_size"
@@ -204,7 +207,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:text="orderdate" />
+            android:text="@string/orderdate" />
 
         <TextView
             android:id="@+id/order_date"
@@ -230,14 +233,14 @@
         android:layout_marginHorizontal="16dp">
 
         <TextView
-            android:paddingBottom="10dp"
             android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
-            android:text="Address"/>
+            android:paddingBottom="10dp"
+            android:text="@string/address" />
 
         <TextView
             android:id="@+id/text_address"
@@ -255,7 +258,7 @@
             android:layout_alignParentStart="true"
             android:layout_below="@id/text_address"
             android:layout_marginStart="10dp"
-            android:text="Description"/>
+            android:text="@string/description"/>
         <TextView
             android:layout_marginTop="10dp"
             android:id="@+id/text_description"
@@ -285,7 +288,7 @@
             android:background="@drawable/radio_null_select"
             android:layout_alignParentStart="true"
             android:gravity="center"
-            android:text="Reject"
+            android:text="@string/reject"
             android:textColor="@color/white"
             android:textAlignment="center"
             android:textSize="26sp"/>
@@ -300,7 +303,7 @@
             android:layout_marginBottom="6dp"
             android:background="@drawable/custom_bt_post"
             android:gravity="center"
-            android:text="Comfirm"
+            android:text="@string/comfirm"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="26sp" />

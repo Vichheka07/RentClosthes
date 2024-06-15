@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/ic_location"
-            android:text="Please add you address" />
+            android:text="@string/please_add_you_address" />
         <ImageView
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="Payment" />
+            android:text="@string/payment" />
         <ImageView
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
@@ -174,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
-            android:text="Select Size" />
+            android:text="@string/select_size" />
 
         <Spinner
             android:id="@+id/Spinner_Size"
@@ -203,7 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
-            android:text="Delivery &amp; Return" />
+            android:text="@string/delivery_amp_return" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -231,7 +231,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:text="description" />
+            android:text="@string/description" />
 
         <TextView
             android:id="@+id/description"
@@ -253,7 +253,7 @@
         android:layout_width="292.65dp"
         android:layout_height="50dp"
         android:background="@drawable/custom_bt_post"
-        android:text="RentNow"
+        android:text="@string/rentnow"
         android:gravity="center"
         android:textSize="26sp"
         android:textAlignment="center"
